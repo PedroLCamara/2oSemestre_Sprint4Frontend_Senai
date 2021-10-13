@@ -17,9 +17,9 @@ var Pessoa = new Object();
 Pessoa.Nome = '';
 Pessoa.Sobrenome = '';
 Pessoa.Sexo = '';
-Pessoa.Idade = 0;
-Pessoa.Altura = 0;
-Pessoa.Peso = 0;
+Pessoa.Idade = new Number();
+Pessoa.Altura = new Number();
+Pessoa.Peso = new Number();
 Pessoa.Andando = false;
 Pessoa.MetrosAndados = 0;
 
