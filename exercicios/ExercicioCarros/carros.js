@@ -61,24 +61,24 @@ Carro.MudarCor = NovaCor => Carro.Cor = NovaCor;
 /*
 Crie um método chamado `obterCor`, que retorne a cor do carro.
 */
-Carro.ObterCor = () => { return Carro.Cor }
+Carro.ObterCor = () => Carro.Cor;
 
 /*
 Crie um método chamado `obterModelo` que retorne o modelo do carro.
 */
-Carro.ObterModelo = () => { return Carro.Modelo }
+Carro.ObterModelo = () => Carro.Modelo;
 
 /*
 Crie um método chamado `obterMarca` que retorne a marca do carro.
 */
-Carro.ObterMarca = () => { return Carro.Marca }
+Carro.ObterMarca = () => Carro.Marca;
 
 /*
 Crie um método chamado `obterMarcaModelo`, que retorne:
 "Esse carro é um [MARCA] [MODELO]"
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
-Carro.ObterMarcaModelo = () => { return "Esse carro é um "+ObterMarca()+" "+ObterModelo() }
+Carro.ObterMarcaModelo = () => "Esse carro é um "+ObterMarca()+" "+ObterModelo();
 
 /*
 Crie um método que irá adicionar pessoas no carro. Esse método terá as

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conversão Temperatura</title>
+</head>
+
+<body>
+
+    <h1>Conversor de temperatura</h1>
+
+    <form id="formtemperatura">
+        <input type="number" required name="temperatura" id="temperatura">
+        <input type="checkbox"  id="celcius" name="temperatura">Celcius</checkbox>
+        <input type="checkbox"  id="fahrenheit" name="temperatura">Fahrenheit</checkbox>
+        <button type="submit" id="btnConverter">Converter</button>
+    </form>
+
+    <script>
+        let CbCelcius = document.getElementById("celcius");
+        let CbFahrenheit = document.getElementById("fahrenheit");
+        let BtnConverter = document.getElementById("btnConverter");
+        let ValorTemperatura = document.getElementById("temperatura");
+        let Formulario = document.getElementById("formtemperatura");
+        let NovoTexto = document.createTextNode('');
+        Formulario.insertBefore(NovoTexto, Formulario.lastChild);
+
+        BtnConverter.addEventListener('click', function(Pagina){
+            Pagina.preventDefault();
+            if (CbCelcius.checked && CbFahrenheit.checked) {
+                console.log("Preencha apenas um campo de conversão!!!");
+                NovoTexto.textContent = "Preencha apenas um campo de conversão!!!";
+            }
+            else if (CbCelcius.checked) {
+                var TempConvertida = (parseInt(ValorTemperatura.value) * 1.8) + 32;
+                console.log(TempConvertida);
+                NovoTexto.textContent = TempConvertida;
+            }
+            else if (CbFahrenheit.checked) {
+                TempConvertida = (parseInt(ValorTemperatura.value) - 32) / 1.8;
+                console.log(TempConvertida);
+                NovoTexto.textContent = TempConvertida;
+            }
+            else{
+                console.log("Selecione algum campo de conversão!");
+                NovoTexto.textContent = "Selecione algum campo de conversão!";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
