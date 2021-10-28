@@ -1,6 +1,8 @@
 //Importa apenas o componente da biblioteca 'React'
 import { Component } from 'react';
+import Header from '../../Components/Header/Header';
 import './TiposEventos.css';
+import "../../assets/Header.css"
 
 //Cria a classe TiposEventos que herda do 'Component' importado
 class TiposEventos extends Component{
@@ -54,6 +56,7 @@ class TiposEventos extends Component{
         return(
             //JSX
             <div className="App">
+                <Header></Header>
                 <main className="App-header">
                     {/* Lista de tipos de eventos */}
                     <section>
